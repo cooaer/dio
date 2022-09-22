@@ -7,7 +7,12 @@ environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  cookie_jar: ^3.0.0
+#  cookie_jar: ^3.0.0
+  cookie_jar:
+#    path: ../../../cookie_jar
+    git:
+      url: git@github.com:cooaer/cookie_jar.git
+      ref: special_characters
   dio: ^4.0.0
 #  dio:
 #    path: ../../dio

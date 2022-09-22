@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 
@@ -61,7 +62,7 @@ class CookieManager extends Interceptor {
     if (cookies != null) {
       await cookieJar.saveFromResponse(
         response.requestOptions.uri,
-        cookies.map((str) => Cookie.fromSetCookieValue(str)).toList(),
+        cookies.map((str) => SpCookie.fromSetCookieValue(str)).toList(),
       );
     }
   }
